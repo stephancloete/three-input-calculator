@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Three Input Challenge - Switch Calculator</title>
+        <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+        
+    </head>
+
+    <body>
+        <div class="calculator">
+            <form>
+                
+                <Label>Calculator</Label>
+                <p>
+                    <label for="firstNumber">Enter first number: </label>
+                        <input id="inputOne" name= "firstNumber" type="number" required>
+                </p>
+
+                <p>
+                    <label for="secondNumber">Enter second number: </label>
+                        <input id="inputTwo" name= "secondNumber" type="number" required>
+                </p>
+
+                <p>
+                    <label for="selectOperator">Choose operator: </label>
+                        <input type="radio" id = "plus" name="selectOperator" value="+" required="required"> Add(+)
+                        <input type="radio" id = "minus" name="selectOperator" value="-" required="required"> Subtract(-)
+                        <input type="radio" id = "divide" name="selectOperator" value="/" required="required"> Divide(/)
+                        <input type="radio" id = "multiply" name="selectOperator" value="*" required="required"> Multiply(*)
+                </p>
+                
+                <input type="submit" onclick= "returnInput()" value="Submit">
+            
+            </form>
+
+        </div>
+        <!--<script src="js/if-script.js" defer></script>-->
+
+        <script>
+
+            function returnInput(){
+            let numberOne = document.getElementById("inputOne").value;
+            numberOne = parseInt(numberOne);
+            let numberTwo = document.getElementById("inputTwo").value;
+            numberTwo = parseInt(numberTwo);
+            let operator = document.querySelector("input[type='radio'][name=selectOperator]:checked").value;
+            
+
+            if(operator == "+"){
+                let answer = numberOne + numberTwo;   
+                alert(numberOne + "+" + numberTwo + "=" + answer);
+                
+            }else if(operator == "-"){
+                let answer = numberOne - numberTwo;
+                alert(numberOne + "-" + numberTwo + "=" + answer);
+                
+            }else if(operator == "/"){
+                let answer = numberOne / numberTwo;
+                alert(numberOne + "/" + numberTwo + "=" + answer);
+                
+            }else if(operator == "*"){
+                let answer = numberOne * numberTwo;
+                alert(numberOne + "*" + numberTwo + "=" + answer);
+                
+            }
+        }
+
+            
+        </script>
+        
+    </body>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Three Input Challenge - Switch Calculator</title>
+        <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+        
+    </head>
+
+    <body>
+        <div class="calculator">
+            <form>
+                
+                <Label>Calculator</Label>
+                <p>
+                    <label for="firstNumber">Enter first number: </label>
+                        <input id="inputOne" name= "firstNumber" type="number" required>
+                </p>
+
+                <p>
+                    <label for="secondNumber">Enter second number: </label>
+                        <input id="inputTwo" name= "secondNumber" type="number" required>
+                </p>
+
+                <p>
+                    <label for="operator">Choose operator: </label>
+                        <input type="radio" name="operator" value="+" required="required"> Add(+)
+                        <input type="radio" name="operator" value="-" required="required"> Subtract(-)
+                        <input type="radio" name="operator" value="/" required="required"> Divide(/)
+                        <input type="radio" name="operator" value="*" required="required"> Multiply(*)
+                </p>
+                
+                <input type="submit" onclick= "returnInput()" value="Submit">
+            
+            </form>
+
+        </div>
+        <!--<script src="js/switch-script.js" defer></script>-->
+
+        <script>
+
+            function returnInput(){
+            let numberOne = document.getElementById("inputOne").value;
+            numberOne = parseInt(numberOne);
+            let numberTwo = document.getElementById("inputTwo").value;
+            numberTwo = parseInt(numberTwo);    
+        }
+            
+        </script>
+        
+    </body>
