@@ -22,29 +22,17 @@
                 </p>
 
                 <p>
-                    <label for="operator">Choose operator: </label>
-                        <input type="radio" name="operator" value="+" required="required"> Add(+)
-                        <input type="radio" name="operator" value="-" required="required"> Subtract(-)
-                        <input type="radio" name="operator" value="/" required="required"> Divide(/)
-                        <input type="radio" name="operator" value="*" required="required"> Multiply(*)
+                    <label for="selectOperator">Choose operator: </label>
+                        <input type="radio" id = "plus" name="selectOperator" value="+" required="required"> Add(+)
+                        <input type="radio" id = "minus" name="selectOperator" value="-" required="required"> Subtract(-)
+                        <input type="radio" id = "divide" name="selectOperator" value="/" required="required"> Divide(/)
+                        <input type="radio" id = "multiply" name="selectOperator" value="*" required="required"> Multiply(*)
                 </p>
                 
                 <input type="submit" onclick= "returnInput()" value="Submit">
             
             </form>
-
+            <script src="js/switch-script.js" defer></script>
         </div>
-        <!--<script src="js/switch-script.js" defer></script>-->
-
-        <script>
-
-            function returnInput(){
-            let numberOne = document.getElementById("inputOne").value;
-            numberOne = parseInt(numberOne);
-            let numberTwo = document.getElementById("inputTwo").value;
-            numberTwo = parseInt(numberTwo);    
-        }
-            
-        </script>
         
     </body>
